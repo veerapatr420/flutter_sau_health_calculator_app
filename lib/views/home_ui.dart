@@ -12,15 +12,14 @@ class HomeUi extends StatefulWidget {
 }
 
 class HomeUiState extends State<HomeUi> {
-
   int barItemIndex = 1;
 
 //สร้างตัวแปร สําหรับเก็บ index ของ BottomNavigationBarItem
-List showUI = [
-  BmiUi(),
-  AboutUi(),
-  BmrUi(),
-];
+  List showUI = [
+    BmiUi(),
+    AboutUi(),
+    BmrUi(),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,7 +36,7 @@ List showUI = [
       bottomNavigationBar: BottomNavigationBar(
         onTap: (paramValue) {
           setState(() {
-            barItemIndex = paramValue ;
+            barItemIndex = paramValue;
           });
         },
         currentIndex: barItemIndex,
@@ -60,7 +59,7 @@ List showUI = [
               label: 'BMR'),
         ],
       ),
-      body: showUI[0],
+      body: showUI[barItemIndex],
     );
   }
 }

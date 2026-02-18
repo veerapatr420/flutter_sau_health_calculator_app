@@ -14,12 +14,15 @@ class AboutUiState extends State<AboutUi> {
       body: Center(
         child: Column(
           children: [
+            SizedBox(
+              height: 160.0,
+            ),
             Text(
               'Body Health Calculator',
-              style: TextStyle(
-                fontSize: 25.0,
-                fontWeight: FontWeight.bold,
-              ),
+              style: TextStyle(fontSize: 25.0, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(
+              height: 20.0,
             ),
             Image.asset(
               'assets/images/logo.png',
@@ -27,19 +30,29 @@ class AboutUiState extends State<AboutUi> {
               height: 150.0,
               fit: BoxFit.cover,
             ),
-            Text(
-              'คำนวณหาค่าดัชนีมวลการ BMI',
-              style: TextStyle(
-                fontSize: 15.0,),
-            ),
+            Text('คำนวณหาค่าดัชนีมวลการ BMI', style: TextStyle(fontSize: 15.0)),
             Text(
               'คำนวณค่าแคลอรี่ที่ร่างกายต้องการ BMR',
-              style: TextStyle(
-                fontSize: 15.0,),
-            )
+              style: TextStyle(fontSize: 15.0),
+            ),
+            SizedBox(
+              height: 220.0,
+            ),
+            Image.asset(
+              'assets/images/sau.png',
+              width: 70.0,
+              height: 70.0,
+              fit: BoxFit.cover,
+              color: Colors.grey,
+            ),
+            SizedBox(
+              height: 10.0,
+            ),
+            Text("Developed By Veerapatr SAU 2026",
+                style: TextStyle(color: Colors.grey, fontSize: 12.0)),
           ],
         ),
-        ),
+      ),
     );
   }
 }
